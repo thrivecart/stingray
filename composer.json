@@ -1,11 +1,14 @@
 {
-    "name": "projectmeta/stingray",
+    "name": "marcfowler/stingray",
     "description": "Stingray - Access array elements via dot notation",
     "license": "MIT",
     "authors": [
         {
             "name": "Matthew Ratzke",
             "email": "matthew.003@me.com"
+        }, {
+          "name": "Marc Fowler",
+          "email": "marc@dfr.me"
         }
     ],
     "minimum-stability": "dev",
