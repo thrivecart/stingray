@@ -1,0 +1,22 @@
+{
+    "name": "projectmeta/stingray",
+    "description": "Stingray - Access array elements via dot notation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Ratzke",
+            "email": "matthew.003@me.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+        "autoload": {
+        "psr-0": { "projectmeta\\Stingray": "src/" }
+    },
+    "require-dev": {
+        "symfony/validator": "*",
+        "behat/behat": "2.4.*@stable"
+    }
+}
