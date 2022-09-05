@@ -33,10 +33,10 @@ class Stingray
      * 
      * @return Array Node
      */
-    public function get(&$data, $string)
+    public function get(&$data, $string, $silent = false)
     {
 
-        return $this->iterateNodeGet($data, $string);
+        return $this->iterateNodeGet($data, $string, $silent);
         
     }
 
@@ -66,10 +66,11 @@ class Stingray
      * 
      * @param &$data Array being searched
      * @param $string String used to search array
+     * @param $silent If array node is missing, it will be created
      * 
      * @return $node Array Node
      */
-    private function iterateNodeGet(&$data, $string)
+    private function iterateNodeGet(&$data, $string, $silent = false)
     {
         
         $paths = explode('.', $string);
@@ -84,11 +85,14 @@ class Stingray
                 
                 $node =& $node[$path];
             
-            } else
+            } else if($silent == false)
             {
                 
                 throw new ArrayNodeNotFoundException($path, $string);
                 
+            } else {
+                $node[$path] = array();
+                $node = & $node[$path];
             }
             
         }
@@ -104,7 +108,7 @@ class Stingray
      * 
      * @param &$data Array being searched
      * @param $string String used to search array
-     * @param $silent If array node is missing it will be create
+     * @param $silent If array node is missing it will be created
      * 
      * @return $node Array Node
      */
