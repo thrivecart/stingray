@@ -1,5 +1,5 @@
 {
-    "name": "marcfowler/stingray",
+    "name": "tcdev/stingray",
     "description": "Stingray - Access array elements via dot notation",
     "license": "MIT",
     "authors": [
